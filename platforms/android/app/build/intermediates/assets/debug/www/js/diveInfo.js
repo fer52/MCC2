@@ -3,22 +3,22 @@ var timeCnn = null;
 var timeOnline = null, keyOnline = '';
 var timeResponse = null;
 var lapsResponse = 0;
-
+var deviceInfoApp;
 var urlCloud = "http://appmcc.websolutions.com.gt/device.ashx";
 //"http://localhost:58005/mccAppOnline/device.ashx";
 //url: "http://appmcc.websolutions.com.gt/device.ashx",
 
 
+function deviceInfoAppP() {
+}
+
 function onDeviceReady() {
 	//navigator.splashscreen.hide();
-	deviceInfoApp = new deviceInfoApp();
+	deviceInfoApp = new deviceInfoAppP();
 	deviceInfoApp.run();
 }
 
-function deviceInfoApp() {
-}
-
-deviceInfoApp.prototype = {
+deviceInfoAppP.prototype = {
     getUUID: function() {
         var d = new Date().getTime();
         var uuid = 'xxxxxxxx-xxxx-4xxx'.replace(/[xy]/g, function(c) {

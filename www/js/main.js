@@ -1,15 +1,15 @@
 // <! [CDATA [
 // Wait for Apache Cordova to load
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 var isClearAbono = true;
 var timeOutFind = null;
 // PhoneGap is ready
-function onDeviceReady() {
+/*function onDeviceReady() {
 	navigator.splashscreen.hide();
     
-}
+}*/
 
-mccApp = function(){}
+mccApp = function(){};
 
 mccApp.prototype = function() {
     var _flightForCheckin = null,
@@ -19,9 +19,6 @@ mccApp.prototype = function() {
     _login = false,    
     run = function(){
         var that = this;
-        //$seatPicker=$('#seatPicker');
-
-        $("labelVersion").text('Update: ' + AppVersion.version);
 
         alert('test');
         $('#cliente').on('pagebeforeshow',$.proxy(_clearClient,that));
